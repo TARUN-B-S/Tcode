@@ -1,0 +1,2 @@
+Hello from the AI agent!
+This file was modified to verify the edit_file tool.
