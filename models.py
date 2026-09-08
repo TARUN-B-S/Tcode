@@ -1,6 +1,7 @@
 import requests
-import json 
-def ask_ollama(model:str="gemma4:31b-cloud",tools:list[dict]=[],messages:list[dict]=[{"role":"user","content":"Hi"}])->dict:
+import json
+
+def ask_ollama(model:str="gpt-oss:120b-cloud",tools:list[dict]=[],messages:list[dict]=[{"role":"user","content":"Hi"}])->dict:
     try:
         url="http://localhost:11434/api/chat"
         payload={
@@ -17,3 +18,6 @@ def ask_ollama(model:str="gemma4:31b-cloud",tools:list[dict]=[],messages:list[di
     except:
         return {"role":"tools","content":"Unknown exception when calling the model"} 
 
+#def prune(model:str="gemma4:31b-cloud",messages:list[dict]):
+ #   Prompt="""You are the context Pruner for a coding agent. Prune the given conversation history with the following rules :
+  #  """
